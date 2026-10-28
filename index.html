@@ -10,7 +10,15 @@
 <meta property="og:image" content="img/capa-livro.jpg">
 <meta name="theme-color" content="#111827">
 <link rel="preload" as="image" href="img/capa-livro.jpg">
-<!-- Cole aqui o código do Pixel da Meta -->
+<!-- Meta Pixel: Pixel de bibliaaplo -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1710127516116386');
+fbq('track','PageView');
+fbq('track','ViewContent',{content_name:'O Braço Revelado',content_category:'Livro digital'});
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1710127516116386&ev=PageView&noscript=1"/></noscript>
+<!-- Fim do Meta Pixel -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&amp;display=swap" rel="stylesheet">
@@ -391,6 +399,9 @@ function go(n){i=(n+imgs.length)%imgs.length;el.src='img/'+imgs[i][0]+'.jpg';el.
 document.getElementById('heroPrev').onclick=function(){go(i-1)};document.getElementById('heroNext').onclick=function(){go(i+1)};
 th.forEach(function(t){t.onclick=function(){go(+t.getAttribute('data-i'))}});
 imgs.forEach(function(x){var p=new Image();p.src='img/'+x[0]+'.jpg'});})();
+</script>
+<script>
+document.addEventListener('click',function(e){var a=e.target.closest('a.cta');if(!a)return;var h=a.getAttribute('href')||'';if(h.charAt(0)!=='#'&&window.fbq){fbq('track','InitiateCheckout',{content_name:'O Braço Revelado'});}});
 </script>
 </body>
 </html>
